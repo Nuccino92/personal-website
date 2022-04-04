@@ -1,0 +1,74 @@
+@use "../../scss/mixins" as mix;
+@use "../../scss/variables" as var;
+
+@font-face {
+  src: url(../../fonts/umopMedium.ttf);
+  font-family: "umop";
+}
+
+.Nav {
+  @include mix.flexCenter(row);
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 15px 100px;
+  z-index: 10;
+  overflow: hidden;
+  transition: 0.6s;
+  // logo
+  h1 {
+    font-family: "umop";
+    @include mix.flexCenter(row);
+    font-size: 25px;
+    margin: 0;
+    letter-spacing: 3px;
+    pointer-events: none;
+  }
+  // list on the right of nav
+  ul {
+    @include mix.flexEnd(row);
+    margin-right: 40px;
+    li {
+      margin: 0 10px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: map-get(var.$font-weights, medium);
+      &:hover {
+        color: var.$primary-colour;
+      }
+    }
+    .change-theme {
+      cursor: pointer;
+      font-size: 30px;
+      margin-left: 7px;
+    }
+  }
+}
+
+// styles for the react icons
+.sun {
+  &:hover {
+    border-radius: 50%;
+    box-shadow: yellow 0px 0px 2px, yellow 0px 8px 24px, yellow 0px 1px 11px;
+  }
+}
+.moon {
+  &:hover {
+    border-radius: 50%;
+    box-shadow: blue 0px 1px 0px, blue 0px 8px 24px, blue 0px 1px 11px;
+  }
+}
+
+// styling for when user is at the top of the page
+.sticky {
+  padding: 5px 40px;
+  ul {
+    li {
+      font-size: 13px;
+      font-weight: map-get(var.$font-weights, light);
+    }
+  }
+}
