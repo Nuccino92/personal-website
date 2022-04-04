@@ -1,0 +1,13 @@
+@use "../scss/variables" as var;
+
+@function weight($weight-name) {
+  @return map-get(var.$font-weights, $weight-name);
+}
+
+// @function mobileSize($size-name) {
+//   @return map-get(var.$mobile, $size-name);
+// }
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
