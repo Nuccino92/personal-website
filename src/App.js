@@ -1,7 +1,25 @@
-import "./App.css";
+import "./App.scss";
+import About from "./components/about/About";
+import Header from "./components/header/Header";
+import Nav from "./components/nav/Nav";
+import Experience from "./components/experience/Experience";
+import Contact from "./components/contact/Contact";
+import { useState } from "react";
 
 function App() {
-  return <div className="App"></div>;
+  const [lightTheme, setLightTheme] = useState(false);
+
+  return (
+    <div className={lightTheme ? "App light" : "App"}>
+      <Nav lightTheme={lightTheme} setLightTheme={setLightTheme} />
+      <main>
+        <Header />
+        <About />
+        <Experience />
+        <Contact />
+      </main>
+    </div>
+  );
 }
 
 export default App;
