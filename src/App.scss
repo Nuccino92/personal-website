@@ -1,0 +1,10 @@
+@use "./scss/mixins" as mix;
+
+.App {
+  @include mix.flexCenter(column);
+  main {
+    width: 1500px;
+    @include mix.flexCenter(column);
+  }
+  overflow-x: hidden;
+}
