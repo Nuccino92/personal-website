@@ -1,0 +1,29 @@
+$primary-colour: rgb(231, 82, 82);
+$secondary-colour: rgb(216, 21, 21);
+$text-colour: white;
+
+$font-weights: (
+  "light": 400,
+  "medium": 600,
+  "bold": 800,
+);
+
+// $mobile: (
+//   "large": 1000px,
+//   "medium": 800px,
+//   "normal": 600px,
+//   "small": 350px,
+// );
+
+$mobile: 800px;
+
+$themes: (
+  light: (
+    backgroundColor: white,
+    textColor: black,
+  ),
+  dark: (
+    backgroundColor: rgb(24, 24, 24),
+    textColor: white,
+  ),
+);
