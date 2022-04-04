@@ -1,0 +1,76 @@
+@use "../../scss/variables" as var;
+@use "../../scss/functions" as func;
+@use "../../scss/mixins" as mix;
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+.Header {
+  @include mix.flexCenter(column);
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  transition: 0.6s;
+
+  h1 {
+    font-size: 100px;
+    font-family: "Josefin Sans", sans-serif;
+    color: var.$primary-colour;
+    white-space: nowrap;
+    animation: fly-in 1.8s;
+
+    @keyframes fly-in {
+      from {
+        transform: translateX(-200%) scale(1);
+
+        opacity: 0.5;
+      }
+      to {
+        transform: translateX(0%) scale(1);
+
+        opacity: 1;
+      }
+    }
+  }
+  .typewriter {
+    p {
+      font-size: 40px;
+      // color: var.$text-colour;
+      font-weight: func.weight(medium);
+      overflow: hidden;
+      border-right: 0.15em solid orange;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: 0.15em;
+      animation: typing 2.9s steps(34, end) forwards,
+        blink-caret 1.5s step-end infinite;
+      animation-delay: 1.9s;
+      opacity: 0;
+      @keyframes typing {
+        0% {
+          width: 0%;
+          opacity: 0;
+        }
+        100% {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: orange;
+        }
+      }
+    }
+  }
+
+  @include mix.mobile {
+    transform: scale(0.7);
+  }
+}
+
+// @extend .Header p <--to copy p without having to re-type
