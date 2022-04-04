@@ -1,0 +1,36 @@
+@use "./variables" as var;
+@use "./functions" as func;
+
+@mixin theme($light-theme: true) {
+  @if $light-theme {
+    background: lighten(rgb(24, 24, 24), 100%);
+    color: darken(var.$text-colour, 100%);
+  }
+}
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin flexStart($direction) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin flexEnd($direction) {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin mobile {
+  @media (max-width: var.$mobile) {
+    @content;
+  }
+}
