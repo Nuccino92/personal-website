@@ -14,7 +14,7 @@
   width: 100%;
   position: fixed;
   top: 0;
-  padding: 15px 100px;
+  padding: 55px 100px;
   z-index: 10;
   overflow: hidden;
   transition: 0.6s;
@@ -32,10 +32,10 @@
     @include mix.flexEnd(row);
     margin-right: 40px;
     li {
+      transition: 1s;
       margin: 0 10px;
       cursor: pointer;
-      font-size: 13px;
-      font-weight: map-get(var.$font-weights, medium);
+      font-size: 17px;
       &:hover {
         color: var.$primary-colour;
       }
@@ -62,7 +62,7 @@
   }
 }
 
-// styling for when user is at the top of the page
+// styling for when user isn't at the top of the page
 .sticky {
   padding: 5px 40px;
   ul {
