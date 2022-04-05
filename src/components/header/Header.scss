@@ -4,6 +4,11 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 
+@font-face {
+  src: url(../../fonts/umopMedium.ttf);
+  font-family: "umop";
+}
+
 .Header {
   @include mix.flexCenter(column);
   align-items: flex-start;
@@ -11,41 +16,94 @@
   width: 100%;
   min-height: 100vh;
   transition: 0.6s;
+  padding-left: 40px;
 
-  h1 {
-    font-size: 100px;
-    font-family: "Josefin Sans", sans-serif;
-    color: var.$primary-colour;
-    white-space: nowrap;
-    animation: fly-in 1.8s;
+  header {
+    // animation: fly-in 1.7s;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    span {
+      font-family: "umop";
+      font-size: 39px;
+      border: 1px solid orange;
+      padding: 22px 15px;
+      border-radius: 2px;
+      background: orange;
+      margin-right: 6px;
+      opacity: 0;
 
-    @keyframes fly-in {
-      from {
-        transform: translateX(-200%) scale(1);
-
-        opacity: 0.5;
+      animation: logo ease-out 1s forwards;
+      animation-delay: 0.5s;
+      @keyframes logo {
+        from {
+          transform: translateX(-300%) scale(1);
+          opacity: 0.3;
+        }
+        to {
+          transform: translateX(0%) scale(1);
+          opacity: 1;
+        }
       }
-      to {
-        transform: translateX(0%) scale(1);
+    }
 
-        opacity: 1;
+    h1 {
+      font-size: 103px;
+      font-family: "Josefin Sans", sans-serif;
+      color: var.$primary-colour;
+      white-space: nowrap;
+      opacity: 0;
+      margin-left: -24px;
+      margin-top: -34px;
+      cursor: grab;
+
+      animation: full-name ease-in-out 2.2s forwards;
+      animation-delay: 1s;
+      @keyframes full-name {
+        0% {
+          transform: translateY(-500%);
+          opacity: 0.8;
+          z-index: 1000;
+        }
+
+        60% {
+          z-index: 0;
+        }
+
+        70% {
+          transform: rotate(8.5) translateY(-70%);
+        }
+
+        71% {
+          transform: rotate(16.5deg);
+          opacity: 1;
+        }
+        100% {
+          transform: rotate(16.5deg) translateY(0%);
+          opacity: 1;
+        }
+      }
+      &:hover {
+        color: orange;
       }
     }
   }
+
   .typewriter {
     p {
       font-size: 40px;
-      // color: var.$text-colour;
       font-weight: func.weight(medium);
       overflow: hidden;
       border-right: 0.15em solid orange;
       white-space: nowrap;
       margin: 0 auto;
       letter-spacing: 0.15em;
-      animation: typing 2.9s steps(34, end) forwards,
-        blink-caret 1.5s step-end infinite;
-      animation-delay: 1.9s;
       opacity: 0;
+
+      animation: typing 2.7s steps(34, end) forwards,
+        blink-caret 1.5s step-end infinite;
+      animation-delay: 2.4s;
+
       @keyframes typing {
         0% {
           width: 0%;
@@ -68,9 +126,57 @@
     }
   }
 
+  button {
+    cursor: pointer;
+    font-size: 20px;
+    opacity: 0;
+    color: default;
+    background: none;
+    color: var.$secondary-colour;
+    outline: none;
+    border: 2px solid var.$secondary-colour;
+    padding: 14px 15px;
+    margin-top: 39px;
+    letter-spacing: 3px;
+    font-weight: 600;
+
+    animation: button 1s forwards;
+    animation-delay: 5.6s;
+    @keyframes button {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    &:hover {
+      filter: brightness(2);
+    }
+  }
+
   @include mix.mobile {
     transform: scale(0.7);
   }
 }
 
-// @extend .Header p <--to copy p without having to re-type
+// class for when user dragges h1
+.dragged {
+  animation: fix-text ease-out 1s forwards !important;
+  opacity: 0;
+  @keyframes fix-text {
+    from {
+      transform: rotate(16.5deg);
+    }
+    to {
+      opacity: 1;
+      transform: rotate(0);
+      margin-left: 0px;
+      margin-top: 0px;
+    }
+  }
+
+  &:hover {
+    color: var.$primary-colour !important;
+  }
+}
