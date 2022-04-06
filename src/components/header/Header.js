@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import "./Header.scss";
 
-const Header = () => {
+const Header = ({ lightTheme }) => {
   const dragRef = useRef(null);
 
   const handleDrag = (e) => {
@@ -11,6 +11,18 @@ const Header = () => {
 
   return (
     <div className="Header">
+      {lightTheme ? (
+        <div className="sun-container">
+          <div className="the-sun"></div>
+        </div>
+      ) : (
+        <div className="stars-container">
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          <div id="stars3"></div>
+        </div>
+      )}
+
       <header>
         <span>AN</span>
         <h1 ref={dragRef} draggable="true" onDragEnd={(e) => handleDrag(e)}>

@@ -16,10 +16,10 @@
   width: 100%;
   min-height: 100vh;
   transition: 0.6s;
-  padding-left: 40px;
+
+  overflow: hidden;
 
   header {
-    // animation: fly-in 1.7s;
     display: flex;
     align-items: center;
     margin-bottom: 4px;
@@ -155,9 +155,9 @@
     }
   }
 
-  @include mix.mobile {
-    transform: scale(0.7);
-  }
+  // @include mix.mobile {
+  //   transform: scale(0.7);
+  // }
 }
 
 // class for when user dragges h1
@@ -178,5 +178,184 @@
 
   &:hover {
     color: var.$primary-colour !important;
+  }
+}
+
+/*--------- star/sun styling -----------------------------*/
+
+@mixin translate50 {
+  -webkit-transform: translate(-50, -50%);
+  -ms-transform: translate(-50, -50%);
+  -o-transform: translate(-50, -50%);
+  transform: translate(50, 50%);
+}
+
+@mixin roundedCorners {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+@mixin rotateBase {
+  -webkit-transform: rotate3d(-1, 1, 0, 0deg);
+  -ms-transform: rotate3d(-1, 1, 0, 0deg);
+  -o-transform: rotate3d(-1, 1, 0, 0deg);
+  transform: rotate3d(-1, 1, 0, 0deg);
+}
+
+@mixin rotateRight {
+  -webkit-transform: rotate3d(-1, 1, 0, 30deg);
+  -ms-transform: rotate3d(-1, 1, 0, 30deg);
+  -o-transform: rotate3d(-1, 1, 0, 30deg);
+  transform: rotate3d(-1, 1, 0, 30deg);
+}
+
+@mixin rotateLeft {
+  -webkit-transform: rotate3d(-1, 1, 0, -30deg);
+  -ms-transform: rotate3d(-1, 1, 0, -30deg);
+  -o-transform: rotate3d(-1, 1, 0, -30deg);
+  transform: rotate3d(-1, 1, 0, -30deg);
+}
+
+// n is number of stars generated
+@function generateStars($n) {
+  $value: "#{0} #{random(5000)}px #{random(5000)}px #FFF";
+
+  @for $i from 2 through $n {
+    $value: "#{$value} , #{random(5000)}px #{random(5000)}px #FFF";
+  }
+
+  @return unquote($value);
+}
+
+$stars-small: generateStars(1000);
+$stars-medium: generateStars(400);
+$stars-big: generateStars(200);
+
+.stars-container {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  align-self: center;
+  width: 200%;
+  height: 100vh;
+
+  @include translate50;
+}
+
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $stars-small;
+  animation: animateStars 28.5s ease-in-out infinite;
+  @include roundedCorners;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $stars-small;
+    @include roundedCorners;
+  }
+}
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $stars-medium;
+  animation: animateStars 30s ease-in-out infinite;
+  @include roundedCorners;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $stars-medium;
+    @include roundedCorners;
+  }
+}
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: $stars-big;
+  animation: animateStars 31.5s ease-in-out infinite;
+  @include roundedCorners;
+
+  &:after {
+    content: " ";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $stars-big;
+    @include roundedCorners;
+  }
+}
+
+@keyframes animateStars {
+  0% {
+    @include rotateBase;
+  }
+  25% {
+    @include rotateRight;
+  }
+  50% {
+    @include rotateBase;
+  }
+  75% {
+    @include rotateLeft;
+  }
+  100% {
+    @include rotateBase;
+  }
+}
+
+.the-sun {
+  opacity: 1;
+  box-shadow: 0px 0px 15px 3px yellow;
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -200px;
+  margin-right: -200px;
+  border-radius: 50%;
+  background-image: radial-gradient(circle, #ffd200 95%, #f7971e);
+
+  animation: sunpulse 2s alternate infinite;
+  @keyframes sunpulse {
+    from {
+      box-shadow: 0 0 1000px #ff0, 0 0 1000px #ff0;
+    }
+    to {
+      box-shadow: 0 0 25px rgb(220, 220, 59), 0 0 75px #ff0;
+    }
   }
 }
