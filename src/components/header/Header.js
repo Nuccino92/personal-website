@@ -33,7 +33,7 @@ const Header = ({ lightTheme }) => {
       <div className="typewriter">
         <p>Full stack developer</p>
       </div>
-      <button>CONTACT ME</button>
+      <button className="btn draw-border">CONTACT ME</button>
     </div>
   );
 };

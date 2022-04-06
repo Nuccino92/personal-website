@@ -126,22 +126,95 @@
     }
   }
 
-  button {
-    cursor: pointer;
-    font-size: 20px;
-    opacity: 0;
-    color: default;
+  @mixin btn-border-drawing(
+    $color: #ccc,
+    $hover: black,
+    $width: 2px,
+    $vertical: top,
+    $horizontal: left,
+    $duration: 0.25s
+  ) {
+    box-shadow: inset 0 0 0 $width $color;
+    color: $color;
+    transition: color $duration $duration/3;
+    position: relative;
+
+    &::before,
+    &::after {
+      border: 0 solid transparent;
+      box-sizing: border-box;
+      content: "";
+      pointer-events: none;
+      position: absolute;
+      width: 0;
+      height: 0;
+
+      #{$vertical}: 0;
+      #{$horizontal}: 0;
+    }
+
+    &::before {
+      $h-side: if($horizontal == "left", "right", "left");
+
+      border-#{$vertical}-width: $width;
+      border-#{$h-side}-width: $width;
+    }
+
+    &::after {
+      $v-side: if($vertical == "top", "bottom", "top");
+
+      border-#{$v-side}-width: $width;
+      border-#{$horizontal}-width: $width;
+    }
+
+    &:hover {
+      color: $hover;
+
+      &::before,
+      &::after {
+        border-color: $hover;
+        transition: border-color 0s, width $duration, height $duration;
+        width: 100%;
+        height: 100%;
+      }
+
+      &::before {
+        transition-delay: 0s, 0s, $duration;
+      }
+
+      &::after {
+        transition-delay: 0s, $duration, 0s;
+      }
+    }
+  }
+
+  .draw-border {
+    @include btn-border-drawing(
+      var.$secondary-colour,
+      orange,
+      4px,
+      bottom,
+      right
+    );
+  }
+
+  //=== Button styling, semi-ignore
+  .btn {
     background: none;
-    color: var.$secondary-colour;
-    outline: none;
-    border: 2px solid var.$secondary-colour;
-    padding: 14px 15px;
+    border: none;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: 1em 2em;
+    letter-spacing: 0.05rem;
     margin-top: 39px;
-    letter-spacing: 3px;
+    opacity: 0;
+    font-size: 20px;
     font-weight: 600;
+    color: var.$secondary-colour;
 
     animation: button 1s forwards;
     animation-delay: 5.6s;
+
     @keyframes button {
       from {
         opacity: 0;
@@ -150,14 +223,7 @@
         opacity: 1;
       }
     }
-    &:hover {
-      filter: brightness(2);
-    }
   }
-
-  // @include mix.mobile {
-  //   transform: scale(0.7);
-  // }
 }
 
 // class for when user dragges h1
