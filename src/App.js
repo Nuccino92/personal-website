@@ -13,7 +13,7 @@ function App() {
     <div className={lightTheme ? "App light" : "App"}>
       <Nav lightTheme={lightTheme} setLightTheme={setLightTheme} />
       <main>
-        <Header />
+        <Header lightTheme={lightTheme} />
         <About />
         <Experience />
         <Contact />
