@@ -3,7 +3,7 @@
 .App {
   @include mix.flexCenter(column);
   main {
-    width: 1500px;
+    width: 80%;
     @include mix.flexCenter(column);
   }
   overflow-x: hidden;
