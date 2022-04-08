@@ -1,0 +1,161 @@
+@use "../../scss/mixins" as mix;
+@use "../../scss/variables" as var;
+
+.About {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 80%;
+  height: 100vh;
+  transition: 0.6s;
+  margin-top: 130px;
+  align-self: center;
+  overflow: hidden;
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 56px;
+    color: var.$primary-colour;
+  }
+  .About-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    .About-top {
+      align-self: center;
+      width: 50%;
+      margin-bottom: 40px;
+      padding: 0 50px;
+      // border: 1px solid white;
+      p {
+        font-size: 16px;
+      }
+      @media (max-width: 1700px) {
+        width: 80%;
+      }
+      @media (max-width: 950px) {
+        width: 100%;
+      }
+    }
+    .About-technologies {
+      @include mix.flexCenter(column);
+      width: 900px;
+      align-self: center;
+      padding: 30px;
+      @media (max-width: 950px) {
+        flex-direction: row;
+        margin-top: 50px;
+      }
+
+      .About-frontend {
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+        @media (max-width: 950px) {
+          margin: 0 20px;
+        }
+
+        h3 {
+          position: relative;
+          font-size: 27px;
+        }
+        h3:after {
+          background-color: var.$primary-colour;
+          content: "";
+          display: inline-block;
+          height: 3px;
+          position: relative;
+          vertical-align: middle;
+          width: 76%;
+          @media (max-width: 950px) {
+            display: none;
+          }
+        }
+
+        h3:after {
+          left: 0.5em;
+          margin-right: -50%;
+        }
+      }
+      .About-backend {
+        @extend .About-frontend;
+        align-self: flex-end;
+
+        @media (max-width: 950px) {
+          margin: 0;
+          align-self: flex-start;
+          display: grid;
+          margin: 0 20px;
+        }
+        h3 {
+          width: 100%;
+          text-align: end;
+        }
+        h3:before {
+          background-color: var.$primary-colour;
+          content: "";
+          display: inline-block;
+          height: 3px;
+          position: relative;
+          vertical-align: middle;
+          width: 95%;
+          @media (max-width: 950px) {
+            display: none;
+          }
+        }
+
+        h3:before {
+          right: 0.5em;
+          margin-left: -50%;
+        }
+        h3:after {
+          display: none;
+        }
+      }
+      ul {
+        display: flex;
+        padding: 40px 0 30px;
+
+        li {
+          margin: 0 30px;
+          @include mix.flexCenter(column);
+          justify-content: flex-end;
+          width: 52px;
+          height: 52px;
+
+          @media (max-width: 950px) {
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+          }
+          img {
+            object-fit: scale-down;
+            height: 44px;
+            width: 44px;
+          }
+          h4 {
+            margin-top: 7px;
+            font-size: 17px;
+          }
+        }
+        @media (max-width: 950px) {
+          flex-direction: column;
+          margin: 0;
+          padding: 0;
+          img {
+            display: none;
+          }
+          li {
+            color: var.$primary-colour;
+            width: auto;
+            height: auto;
+            align-self: center;
+          }
+        }
+      }
+    }
+  }
+}
