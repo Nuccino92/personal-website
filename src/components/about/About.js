@@ -1,4 +1,5 @@
 import "./About.scss";
+import { Fade } from "react-awesome-reveal";
 // front end logos
 import HTML from "../../images/frontend/html.png";
 import CSS from "../../images/frontend/css.png";
@@ -17,32 +18,43 @@ const About = () => {
   return (
     <div className="About">
       <div className="About-container">
-        <div className="About-top">
-          <h1>About me</h1>
-          <p>
-            Lorem ipsum dolor sit amet, duis consul ut ius, harum epicuri quo
-            eu. Eu sit aperiri consetetur incorrupte. Ei dicat aliquid
-            neglegentur usu, bonorum philosophia at nam. In malorum indoctum.
-          </p>
-          <br></br>
-          <p>
-            Lorem ipsum dolor sit amet, duis consul ut ius, harum epicuri quo
-            eu. Eu sit aperiri consetetur incorrupte. Ei dicat aliquid
-            neglegentur usu, bonorum philosophia at nam. In malorum indoctum.
-          </p>
-          <br></br>
-          <p>
-            Lorem ipsum dolor sit amet, duis consul ut ius, harum epicuri quo
-            eu. Eu sit aperiri consetetur incorrupte.
-          </p>
-          <br></br>
-          <p style={{ fontWeight: "bold" }}>
-            Here are some of the technologies i use
-          </p>
-        </div>
+        <Fade
+          triggerOnce
+          className="About-top-scroll"
+          damping={0}
+          direction="up"
+          duration={900}
+        >
+          <div className="About-top">
+            <h1>About me</h1>
+
+            <p>
+              Lorem ipsum dolor sit amet, duis consul ut ius, harum epicuri quo
+              eu. Eu sit aperiri consetetur incorrupte. Ei dicat aliquid
+              neglegentur usu, bonorum philosophia at nam. In malorum indoctum.
+            </p>
+            <br></br>
+            <p>
+              Lorem ipsum dolor sit amet, duis consul ut ius, harum epicuri quo
+              eu. Eu sit aperiri consetetur incorrupte. Ei dicat aliquid
+              neglegentur usu, bonorum philosophia at nam. In malorum indoctum.
+            </p>
+            <br></br>
+            <p>
+              Lorem ipsum dolor sit amet, duis consul ut ius, harum epicuri quo
+              eu. Eu sit aperiri consetetur incorrupte.
+            </p>
+            <br></br>
+            <p style={{ fontWeight: "bold" }}>
+              Here are some of the technologies i use
+            </p>
+          </div>
+        </Fade>
         <div className="About-technologies">
           <div className="About-frontend">
-            <h3>Front End</h3>
+            <Fade direction="left" delay={700} triggerOnce>
+              <h3>Front End</h3>
+            </Fade>
             <ul>
               <li>
                 <img src={HTML} alt="HTML Logo"></img>
@@ -68,10 +80,12 @@ const About = () => {
                 <img src={SASS} alt="SASS Logo"></img>
                 <h4>SASS</h4>
               </li>
-            </ul>
+            </ul>{" "}
           </div>
           <div className="About-backend">
-            <h3>Back End</h3>
+            <Fade direction="right" delay={700} triggerOnce>
+              <h3>Back End</h3>
+            </Fade>
             <ul style={{ alignSelf: "flex-end" }}>
               <li>
                 <img src={Node} alt="Node Logo"></img>
