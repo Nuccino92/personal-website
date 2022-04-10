@@ -16,7 +16,7 @@ function App() {
         <Header lightTheme={lightTheme} />
         <About />
         <Experience />
-        <Contact />
+        <Contact lightTheme={lightTheme} />
       </main>
     </div>
   );
