@@ -2,6 +2,7 @@
 
 .App {
   @include mix.flexCenter(column);
+  position: relative;
   main {
     width: 80%;
     @include mix.flexCenter(column);
