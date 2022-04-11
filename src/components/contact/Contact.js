@@ -7,6 +7,7 @@ import { Fade } from "react-awesome-reveal";
 import GitHubLogo from "../../images/logos/github.png";
 import LinkedInLogo from "../../images/logos/linkedIn.png";
 import Listening from "../../images/listening.png";
+import EmailPrompt from "./emailPrompt/EmailPrompt";
 
 const Contact = ({ lightTheme }) => {
   const emailRegex = /\S+@\S+\.\S+/;
@@ -25,8 +26,11 @@ const Contact = ({ lightTheme }) => {
     message: "",
   });
 
+  const [emailSent, setEmailSent] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const { from_name, from_email, title, message } = formData;
 
     if (from_name === "")
@@ -116,10 +120,22 @@ const Contact = ({ lightTheme }) => {
       process.env.REACT_APP_USER_ID
     ).then(
       (result) => {
-        console.log(result.text);
+        e.target.reset();
+
+        setEmailSent(true);
+        setTimeout(() => {
+          setEmailSent(false);
+        }, 7000);
+
+        setFormData({
+          from_name: "",
+          from_email: "",
+          title: "",
+          message: "",
+        });
       },
       (error) => {
-        console.log(error);
+        console.log(error.text);
       }
     );
   };
@@ -154,7 +170,7 @@ const Contact = ({ lightTheme }) => {
             porta sit amet neque eget.
           </p>
 
-          <form>
+          <form onSubmit={handleSubmit}>
             <div>
               <input
                 style={
@@ -162,6 +178,7 @@ const Contact = ({ lightTheme }) => {
                     ? { boxShadow: "inset 0 -4px rgb(216, 21, 21)" }
                     : null
                 }
+                value={formData.from_name}
                 name="from_name"
                 type="text"
                 placeholder="name"
@@ -173,6 +190,7 @@ const Contact = ({ lightTheme }) => {
                     ? { boxShadow: "inset 0 -4px rgb(216, 21, 21)" }
                     : null
                 }
+                value={formData.from_email}
                 name="from_email"
                 type="text"
                 placeholder="email"
@@ -185,6 +203,7 @@ const Contact = ({ lightTheme }) => {
                   ? { boxShadow: "inset 0 -4px rgb(216, 21, 21)" }
                   : null
               }
+              value={formData.title}
               name="title"
               type="text"
               placeholder="title"
@@ -198,15 +217,12 @@ const Contact = ({ lightTheme }) => {
               }
               cols={11}
               rows={22}
+              value={formData.message}
               name="message"
               placeholder="message"
               onChange={handleChange}
             />
-            <button
-              onClick={handleSubmit}
-              type="submit"
-              className="btn draw-border"
-            >
+            <button type="submit" className="btn draw-border">
               Send A Message
             </button>
           </form>
@@ -267,6 +283,7 @@ const Contact = ({ lightTheme }) => {
 
         <img className="listening-image" src={Listening} alt="Listening" />
       </div>
+      {emailSent && <EmailPrompt />}
     </div>
   );
 };
