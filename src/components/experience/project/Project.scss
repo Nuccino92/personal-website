@@ -1,0 +1,92 @@
+@use "../../../scss/mixins" as mix;
+@use "../../../scss/variables" as var;
+
+.Project {
+  margin: 50px 0;
+
+  div {
+    @include mix.flexCenter(row);
+
+    img {
+      width: 700px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .Project-info-container {
+      @include mix.flexStart(column);
+      align-items: flex-start;
+
+      padding: 20px;
+      h4 {
+        font-size: 26px;
+      }
+      p {
+        // background-color: var.$primary-colour;
+
+        padding: 20px 0;
+        filter: brightness(1.1);
+      }
+    }
+
+    .technologies-container {
+      margin-top: 10px;
+
+      span {
+        padding: 3px 10px;
+        background-color: rgb(125, 125, 210);
+        margin-left: 5px;
+      }
+    }
+
+    .links-container {
+      margin-top: 10px;
+      button {
+        cursor: pointer;
+        padding: 8px;
+        background: none;
+        outline: none;
+        border: none;
+        font-weight: 600;
+        font-size: 13px;
+        @include mix.btn-border-drawing(
+          var.$secondary-colour,
+          orange,
+          2px,
+          bottom,
+          right
+        );
+      }
+    }
+  }
+
+  .image-liveLink {
+    div {
+      display: none;
+    }
+  }
+  .image-liveLink:hover {
+    position: relative;
+    div {
+      @include mix.flexCenter(row);
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: black;
+      opacity: 0.55;
+      button {
+        font-size: 22px;
+        padding: 20px;
+        font-weight: 600;
+        border-radius: 50px;
+        z-index: 2;
+        cursor: pointer;
+      }
+      button:hover {
+        filter: brightness(1.3);
+      }
+    }
+  }
+}
