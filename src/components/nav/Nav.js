@@ -5,6 +5,8 @@ import { BsFillMoonStarsFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrClose } from "react-icons/gr";
 
+import { Fade } from "react-awesome-reveal";
+
 const Nav = ({
   lightTheme,
   setLightTheme,
@@ -19,6 +21,7 @@ const Nav = ({
 
   const handleClick = () => {
     setLightTheme((prev) => !prev);
+    setSmallNav(false);
   };
 
   const handleHeaderScroll = () => {
@@ -96,9 +99,15 @@ const Nav = ({
                 onClick={() => setSmallNav(false)}
                 className="close"
               />
-              <li onClick={handleAboutScroll}>About</li>
-              <li onClick={handleExperienceScroll}>Experience</li>
-              <li onClick={handleContactScroll}>Contact</li>
+              <Fade direction="left" delay={100}>
+                <li onClick={handleAboutScroll}>About</li>
+              </Fade>
+              <Fade direction="right" delay={300}>
+                <li onClick={handleExperienceScroll}>Experience</li>
+              </Fade>
+              <Fade direction="left" delay={600}>
+                <li onClick={handleContactScroll}>Contact</li>
+              </Fade>
 
               {lightTheme ? (
                 <BsFillMoonStarsFill
@@ -111,7 +120,7 @@ const Nav = ({
                 <FiSun
                   style={{ display: "initial", color: "white" }}
                   className="change-theme sun"
-                  size={21}
+                  size={33}
                   onClick={handleClick}
                 />
               )}

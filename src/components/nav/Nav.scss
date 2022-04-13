@@ -105,12 +105,11 @@
   .side-nav {
     @include mix.flexCenter(column);
     height: 100%;
-    width: 40%;
-    right: 0;
+    width: 100%;
     position: absolute;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding: 70px 0;
+    justify-content: center;
+    align-items: center;
+    // padding: 70px 0;
     background: black;
     transform: 3s ease-in;
     overflow-y: hidden;
@@ -118,6 +117,26 @@
 
     .close {
       filter: invert(100%);
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 40px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin-top: -250px;
+      .sun,
+      .moon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 40px;
+      }
+    }
+    li {
+      margin: 10px 0;
+      font-size: 30px;
     }
   }
 }
