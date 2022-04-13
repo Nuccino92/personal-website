@@ -37,7 +37,10 @@ const Header = ({ lightTheme, refHeader, refContact }) => {
       <div className="typewriter">
         <p>Full stack developer</p>
       </div>
-      <button className="btn draw-border" onClick={handleContactScroll}>
+      <button
+        className="btn draw-border header-button"
+        onClick={handleContactScroll}
+      >
         CONTACT ME
       </button>
     </div>

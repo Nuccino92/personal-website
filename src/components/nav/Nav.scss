@@ -19,6 +19,10 @@
   overflow: hidden;
   transition: 0.6s;
 
+  @media (max-width: 600px) {
+    padding: 10px 30px;
+  }
+
   // logo
   h1 {
     font-family: "umop";
@@ -28,7 +32,7 @@
     letter-spacing: 3px;
     cursor: pointer;
     @media (max-width: 420px) {
-      margin-left: -43px;
+      margin-left: -23px;
     }
   }
   // list on the right of nav
@@ -107,12 +111,7 @@
     height: 100%;
     width: 100%;
     position: absolute;
-    justify-content: center;
-    align-items: center;
-    // padding: 70px 0;
     background: black;
-    transform: 3s ease-in;
-    overflow-y: hidden;
     color: var.$primary-colour;
 
     .close {
@@ -125,6 +124,8 @@
     ul {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       margin-top: -250px;
       .sun,
       .moon {
@@ -135,7 +136,7 @@
       }
     }
     li {
-      margin: 10px 0;
+      margin: 16px 0;
       font-size: 30px;
     }
   }

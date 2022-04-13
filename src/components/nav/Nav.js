@@ -91,41 +91,43 @@ const Nav = ({
       </div>
       {smallNav && (
         <div className="nav-modal">
-          <div className="side-nav">
-            <ul>
-              <GrClose
-                size={33}
-                color={"white"}
-                onClick={() => setSmallNav(false)}
-                className="close"
-              />
-              <Fade direction="left" delay={100}>
-                <li onClick={handleAboutScroll}>About</li>
-              </Fade>
-              <Fade direction="right" delay={300}>
-                <li onClick={handleExperienceScroll}>Experience</li>
-              </Fade>
-              <Fade direction="left" delay={600}>
-                <li onClick={handleContactScroll}>Contact</li>
-              </Fade>
-
-              {lightTheme ? (
-                <BsFillMoonStarsFill
-                  className="change-theme moon"
-                  size={21}
-                  onClick={handleClick}
-                  style={{ display: "initial", color: "white" }}
-                />
-              ) : (
-                <FiSun
-                  style={{ display: "initial", color: "white" }}
-                  className="change-theme sun"
+          <Fade>
+            <div className="side-nav">
+              <ul>
+                <GrClose
                   size={33}
-                  onClick={handleClick}
+                  color={"white"}
+                  onClick={() => setSmallNav(false)}
+                  className="close"
                 />
-              )}
-            </ul>
-          </div>
+                <Fade direction="left" delay={100}>
+                  <li onClick={handleAboutScroll}>About</li>
+                </Fade>
+                <Fade direction="right" delay={300}>
+                  <li onClick={handleExperienceScroll}>Experience</li>
+                </Fade>
+                <Fade direction="left" delay={600}>
+                  <li onClick={handleContactScroll}>Contact</li>
+                </Fade>
+
+                {lightTheme ? (
+                  <BsFillMoonStarsFill
+                    className="change-theme moon"
+                    size={21}
+                    onClick={handleClick}
+                    style={{ display: "initial", color: "white" }}
+                  />
+                ) : (
+                  <FiSun
+                    style={{ display: "initial", color: "white" }}
+                    className="change-theme sun"
+                    size={33}
+                    onClick={handleClick}
+                  />
+                )}
+              </ul>
+            </div>
+          </Fade>
         </div>
       )}
     </>

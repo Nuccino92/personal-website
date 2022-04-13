@@ -17,12 +17,75 @@
   min-height: 100vh;
   transition: 0.6s;
 
-  overflow: hidden;
+  @media (max-width: 900px) {
+    header {
+      transform: scale(0.7);
+      transform-origin: left;
+    }
+    .typewriter {
+      p {
+        font-size: 25px !important;
+      }
+    }
+    .header-button {
+      transform: scale(0.9);
+      transform-origin: left;
+    }
+  }
+
+  @media (max-width: 570px) {
+    header {
+      transform: scale(0.5);
+      h1 {
+        transform: rotate(0) !important;
+        margin: 0 !important;
+      }
+    }
+    .typewriter {
+      p {
+        font-size: 22px !important;
+      }
+    }
+    .header-button {
+      transform: scale(0.8);
+      transform-origin: left;
+    }
+  }
+
+  @media (max-width: 420px) {
+    header {
+      transform: scale(0.4);
+      h1 {
+        transform: rotate(0) !important;
+        margin: 0 !important;
+      }
+    }
+  }
+
+  @media (max-width: 335px) {
+    header {
+      transform: scale(0.3);
+      h1 {
+        transform: rotate(0) !important;
+        margin: 0 !important;
+      }
+    }
+    .typewriter {
+      p {
+        font-size: 17px !important;
+      }
+    }
+    .header-button {
+      transform: scale(0.7);
+      transform-origin: left;
+    }
+  }
 
   header {
     display: flex;
     align-items: center;
     margin-bottom: 4px;
+
     span {
       font-family: "umop";
       font-size: 39px;
