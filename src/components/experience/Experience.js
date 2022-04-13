@@ -2,9 +2,9 @@ import "./Experience.scss";
 import Project from "./project/Project";
 import Projects from "./project/projects.json";
 
-const Experience = () => {
+const Experience = ({ refExperience }) => {
   return (
-    <div className="Experience">
+    <div className="Experience" ref={refExperience}>
       <h1> Some of the things i've built </h1>
       <main>
         {Projects.map((project, index) => {

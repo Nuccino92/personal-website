@@ -14,9 +14,9 @@ import Mongo from "../../images/backend/mongo.png";
 import MySQL from "../../images/backend/mysql.png";
 import Firebase from "../../images/backend/firebase.png";
 
-const About = () => {
+const About = ({ refAbout }) => {
   return (
-    <div className="About">
+    <div className="About" ref={refAbout}>
       <div className="About-container">
         <Fade
           triggerOnce

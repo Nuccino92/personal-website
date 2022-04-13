@@ -9,7 +9,7 @@ import LinkedInLogo from "../../images/logos/linkedIn.png";
 import Listening from "../../images/listening.png";
 import EmailPrompt from "./emailPrompt/EmailPrompt";
 
-const Contact = ({ lightTheme }) => {
+const Contact = ({ lightTheme, refContact }) => {
   const emailRegex = /\S+@\S+\.\S+/;
 
   const [errors, setErrors] = useState({
@@ -154,6 +154,7 @@ const Contact = ({ lightTheme }) => {
   return (
     <div
       className="Contact"
+      ref={refContact}
       style={
         lightTheme
           ? { backgroundColor: "rgb(24,24,24)" }

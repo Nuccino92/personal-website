@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import "./Header.scss";
 
-const Header = ({ lightTheme }) => {
+const Header = ({ lightTheme, refHeader, refContact }) => {
   const dragRef = useRef(null);
 
   const handleDrag = (e) => {
@@ -9,8 +9,12 @@ const Header = ({ lightTheme }) => {
     div.className = "dragged";
   };
 
+  const handleContactScroll = () => {
+    refContact.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className="Header">
+    <div className="Header" ref={refHeader}>
       {lightTheme ? (
         <div className="sun-container">
           <div className="the-sun"></div>
@@ -33,7 +37,9 @@ const Header = ({ lightTheme }) => {
       <div className="typewriter">
         <p>Full stack developer</p>
       </div>
-      <button className="btn draw-border">CONTACT ME</button>
+      <button className="btn draw-border" onClick={handleContactScroll}>
+        CONTACT ME
+      </button>
     </div>
   );
 };
