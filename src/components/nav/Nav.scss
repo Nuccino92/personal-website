@@ -18,6 +18,7 @@
   z-index: 10;
   overflow: hidden;
   transition: 0.6s;
+
   // logo
   h1 {
     font-family: "umop";
@@ -25,7 +26,10 @@
     font-size: 25px;
     margin: 0;
     letter-spacing: 3px;
-    pointer-events: none;
+    cursor: pointer;
+    @media (max-width: 420px) {
+      margin-left: -43px;
+    }
   }
   // list on the right of nav
   ul {
@@ -36,6 +40,10 @@
       margin: 0 10px;
       cursor: pointer;
       font-size: 17px;
+
+      @media (max-width: 700px) {
+        display: none;
+      }
       &:hover {
         color: var.$primary-colour;
       }
@@ -50,12 +58,18 @@
 
 // styles for the react icons
 .sun {
+  @media (max-width: 700px) {
+    display: none;
+  }
   &:hover {
     border-radius: 50%;
     box-shadow: yellow 0px 0px 2px, yellow 0px 8px 24px, yellow 0px 1px 11px;
   }
 }
 .moon {
+  @media (max-width: 700px) {
+    display: none;
+  }
   &:hover {
     border-radius: 50%;
     box-shadow: blue 0px 1px 0px, blue 0px 8px 24px, blue 0px 1px 11px;
@@ -70,5 +84,49 @@
       font-size: 13px;
       font-weight: map-get(var.$font-weights, light);
     }
+  }
+}
+
+.nav-modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.646);
+  z-index: 1000;
+
+  @media (max-width: 700px) {
+    display: initial;
+  }
+
+  .side-nav {
+    @include mix.flexCenter(column);
+    height: 100%;
+    width: 40%;
+    right: 0;
+    position: absolute;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 70px 0;
+    background: black;
+    transform: 3s ease-in;
+    overflow-y: hidden;
+    color: var.$primary-colour;
+
+    .close {
+      filter: invert(100%);
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  margin-right: -63px;
+  @media (max-width: 700px) {
+    display: initial;
   }
 }
