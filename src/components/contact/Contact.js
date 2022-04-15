@@ -1,5 +1,5 @@
 import "./Contact.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { send } from "emailjs-com";
 
 import { Fade } from "react-awesome-reveal";
@@ -285,6 +285,7 @@ const Contact = ({ lightTheme, refContact }) => {
         <img className="listening-image" src={Listening} alt="Listening" />
       </div>
       {emailSent && <EmailPrompt />}
+      <div className="contact-background-text">Contact</div>
     </div>
   );
 };

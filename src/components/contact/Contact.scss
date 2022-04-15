@@ -8,6 +8,7 @@
   padding: 200px 300px 100px 300px;
   display: flex;
   scroll-margin: -220px;
+  z-index: 0;
 
   @media (max-width: 1900px) {
     padding: 200px 200px 100px 200px;
@@ -196,4 +197,16 @@
     width: calc(222% + 1.3px);
     height: 99px;
   }
+}
+
+// section background text
+.contact-background-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  font-size: 244px;
+  opacity: 0.05;
+  font-weight: 900;
+  color: var.$primary-colour;
 }

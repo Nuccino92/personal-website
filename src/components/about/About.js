@@ -111,6 +111,7 @@ const About = ({ refAbout }) => {
           </div>{" "}
         </div>
       </div>
+      <div className="about-background-text">About</div>
     </div>
   );
 };

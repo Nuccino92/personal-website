@@ -11,6 +11,7 @@ const Experience = ({ refExperience }) => {
           return <Project project={project} key={index} index={index} />;
         })}
       </main>
+      <div className="experience-background-text">Experience</div>
     </div>
   );
 };
