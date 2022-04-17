@@ -1,23 +1,44 @@
 import "./Project.scss";
 
 import { Fade } from "react-awesome-reveal";
+import { useEffect, useState } from "react";
 
 const Project = ({ project, index }) => {
   const { name, picture, about, liveLink, technologies, github } = project;
 
+  const [matches, setMatches] = useState(
+    window.matchMedia("(min-width: 1200px)").matches
+  );
+  useEffect(() => {
+    window
+      .matchMedia("(min-width: 1200px)")
+      .addEventListener("change", (e) => setMatches(e.matches));
+  }, []);
+
   return (
-    <div className="Project">
-      {index % 2 === 0 ? (
+    <div
+      className="Project"
+      style={index === 2 ? { marginBottom: "110px" } : null}
+    >
+      {index % 2 !== 0 ? (
         <div>
-          <Fade direction="left" delay={420} triggerOnce>
-            <a href={liveLink} target="blank" className="image-liveLink">
+          <Fade direction="left" delay={450} triggerOnce>
+            <a href={liveLink} target="blank" className="image-liveLink ">
               <img src={picture} alt="Project"></img>
             </a>
           </Fade>
           <Fade direction="right" triggerOnce>
-            <div className="Project-info-container">
+            <div
+              className="Project-info-container"
+              style={
+                matches
+                  ? { background: "none" }
+                  : { backgroundImage: `url(${picture})`, color: "white" }
+              }
+            >
               <h4 style={{ alignSelf: "flex-end" }}>{name}</h4>
-              <p style={{ textAlign: "end" }}>{about}</p>
+              <p style={{ textAlign: "end" }}>{about[0].description}</p>
+              <p style={{ textAlign: "end" }}>{about[0].tech}</p>
               <div
                 className="technologies-container"
                 style={{ alignSelf: "flex-end" }}
@@ -52,9 +73,17 @@ const Project = ({ project, index }) => {
       ) : (
         <div>
           <Fade direction="left" triggerOnce>
-            <div className="Project-info-container">
+            <div
+              className="Project-info-container"
+              style={
+                matches
+                  ? { background: "none" }
+                  : { backgroundImage: `url(${picture})`, color: "white" }
+              }
+            >
               <h4>{name}</h4>
-              <p>{about}</p>
+              <p>{about[0].description}</p>
+              <p>{about[0].tech}</p>
               <div className="technologies-container">
                 {technologies.map((technology, index) => {
                   return (
@@ -79,13 +108,14 @@ const Project = ({ project, index }) => {
               </div>
             </div>
           </Fade>
-          <Fade direction="right" delay={420} triggerOnce>
+          <Fade direction="right" delay={450} triggerOnce>
             <a href={liveLink} target="blank" className="image-liveLink">
               <img src={picture} alt="Project"></img>
             </a>
           </Fade>
         </div>
       )}
+      {index !== 2 && <hr style={matches ? null : { display: "none" }}></hr>}
     </div>
   );
 };
