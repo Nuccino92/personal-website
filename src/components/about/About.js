@@ -27,25 +27,26 @@ const About = ({ refAbout }) => {
         >
           <div className="About-top">
             <h1>About me</h1>
-
             <p>
-              Lorem ipsum dolor sit amet, duis consul ut ius, harum epicuri quo
-              eu. Eu sit aperiri consetetur incorrupte. Ei dicat aliquid
-              neglegentur usu, bonorum philosophia at nam. In malorum indoctum.
+              Hi,&#160; I'm Anthony,&#160; a Full Stack Developer who luckily
+              found and fell in love with programming in the pursuit of
+              bettering myself.
             </p>
             <br></br>
             <p>
-              Lorem ipsum dolor sit amet, duis consul ut ius, harum epicuri quo
-              eu. Eu sit aperiri consetetur incorrupte. Ei dicat aliquid
-              neglegentur usu, bonorum philosophia at nam. In malorum indoctum.
+              I consider myself a naturally curious person who enjoys learning
+              about and acquiring new skills, which is what makes development so
+              much fun.
             </p>
             <br></br>
             <p>
-              Lorem ipsum dolor sit amet, duis consul ut ius, harum epicuri quo
-              eu. Eu sit aperiri consetetur incorrupte.
+              I've found equal enjoyment when working from the front or back
+              end, whether it'd be creating an API or UI as long as I am able to
+              improve and build upon myself that is where I find true
+              excitement.
             </p>
             <br></br>
-            <p style={{ fontWeight: "bold" }}>
+            <p className="about-me-technologies-p">
               Here are some of the technologies i use
             </p>
           </div>
@@ -83,7 +84,7 @@ const About = ({ refAbout }) => {
             </ul>{" "}
           </div>
           <div className="About-backend">
-            <Fade direction="right" delay={700} triggerOnce>
+            <Fade direction="right" delay={1000} triggerOnce>
               <h3>Back End</h3>
             </Fade>
             <ul style={{ alignSelf: "flex-end" }}>
