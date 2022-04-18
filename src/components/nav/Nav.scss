@@ -106,7 +106,7 @@
     display: initial;
   }
 
-  .side-nav {
+  .nav-modal-content {
     @include mix.flexCenter(column);
     height: 100%;
     width: 100%;
@@ -138,6 +138,21 @@
     li {
       margin: 16px 0;
       font-size: 30px;
+    }
+    .nav-links-container {
+      position: absolute;
+      bottom: 0;
+      width: 100vw;
+      @include mix.flexCenter(row);
+      img {
+        height: auto;
+        width: 50px;
+        margin: 5px 10px;
+        cursor: pointer;
+      }
+      .github-small-nav {
+        filter: invert(90%);
+      }
     }
   }
 }
