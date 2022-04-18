@@ -2,7 +2,12 @@
   {
     "id": 1,
     "name": "Facebook Clone",
-    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "about": [
+      {
+        "description": "A Web Application intended to look and operate in a similar fashion to Facebook. Users can create an account, post, comment and add friends. Along with other features this project was intended to provide the same feel one would get using Facebook.",
+        "tech": "The client side was built with React, and Redux to handle state. Axios was used to to make the necessary API calls to our server side which was built using Express. For data handling MongoDB Atlas was used as well as Cloudinary for image uploading."
+      }
+    ],
     "technologies": [
       "Node",
       "Express",
@@ -20,7 +25,12 @@
   {
     "id": 2,
     "name": "ChatApp",
-    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "about": [
+      {
+        "description": "ChatApp allows users to create an account and connect with friends. Using web Socket.IO the app allows users to have real time conversations similar to other applications like WhatsApp.",
+        "tech": "The applications client side was build with React and Redux, with Axios used to make API calls to the server side which was build with Express. All data is managed by ClearDB MySQL using Sequelize."
+      }
+    ],
     "technologies": [
       "Node",
       "Express",
@@ -38,7 +48,12 @@
   {
     "id": 3,
     "name": "YouTube Clone",
-    "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "about": [
+      {
+        "description": "The YouTube Clone application allows users to find and search for videos using YouTube's API.",
+        "tech": "The application was made with React and the Context API for state management. Firebase was used for hosting as well as user authentication."
+      }
+    ],
     "technologies": ["Javascript", "CSS", "React", "Firebase"],
     "picture": "https://cdn.discordapp.com/attachments/709512705819672637/963198443394850867/unknown.png",
     "github": "https://github.com/Nuccino92/youtube-mock",
