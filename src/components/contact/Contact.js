@@ -166,9 +166,16 @@ const Contact = ({ lightTheme, refContact }) => {
           <h1>Contact me!</h1>
 
           <p style={lightTheme ? { color: "white" } : { color: "black" }}>
-            Etiam faucibus ante et lacinia dignissim. Proin quis dapibus tortor.
-            Sed id lectus in metus hendrerit efficitur sed sed dui. Ut leo quam,
-            porta sit amet neque eget.
+            You can contact me here&#160;
+            <a
+              title="email"
+              className="email-address"
+              href="mailto:anthonynucci92@gmail.com"
+            >
+              anthonynucci92@gmail.com
+            </a>
+            &#160;or through the form and I'll be sure to get back to you as
+            soon as I can.
           </p>
 
           <form onSubmit={handleSubmit}>
