@@ -7,6 +7,9 @@ import { GrClose } from "react-icons/gr";
 
 import { Fade } from "react-awesome-reveal";
 
+import GitHubLogo from "../../images/logos/github.png";
+import LinkedInLogo from "../../images/logos/linkedIn.png";
+
 const Nav = ({
   lightTheme,
   setLightTheme,
@@ -92,7 +95,7 @@ const Nav = ({
       {smallNav && (
         <div className="nav-modal">
           <Fade>
-            <div className="side-nav">
+            <div className="nav-modal-content">
               <ul>
                 <GrClose
                   size={33}
@@ -125,6 +128,21 @@ const Nav = ({
                     onClick={handleClick}
                   />
                 )}
+                <div className="nav-links-container">
+                  <a
+                    href="https://www.linkedin.com/in/anthony-n-96a368237/"
+                    target={"blank"}
+                  >
+                    <img src={LinkedInLogo} alt="LinkedIn Logo" />
+                  </a>
+                  <a href="https://github.com/Nuccino92" target={"blank"}>
+                    <img
+                      className="github-small-nav"
+                      src={GitHubLogo}
+                      alt="Github Logo"
+                    />
+                  </a>
+                </div>
               </ul>
             </div>
           </Fade>
