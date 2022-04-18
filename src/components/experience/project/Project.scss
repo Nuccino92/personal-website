@@ -2,45 +2,57 @@
 @use "../../../scss/variables" as var;
 
 .Project {
-  margin: 50px 0;
+  width: 1210px;
+  position: relative;
+  transition: 0.6s;
 
   div {
     @include mix.flexCenter(row);
 
     img {
-      width: 700px;
+      position: relative;
+      border-radius: 2px;
+      width: 570px;
       height: auto;
       cursor: pointer;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+      transition: 0.4s ease-in;
+      filter: grayscale(100%) brightness(27%) sepia(100%) hue-rotate(-50deg)
+        saturate(300%) contrast(0.8);
+
+      &:hover {
+        filter: none;
+      }
     }
 
     .Project-info-container {
       @include mix.flexStart(column);
       align-items: flex-start;
-
       padding: 20px;
+
       h4 {
         font-size: 26px;
       }
-      p {
-        // background-color: var.$primary-colour;
 
-        padding: 20px 0;
-        filter: brightness(1.1);
+      p {
+        font-size: 16px;
+        padding: 10px 0;
+        z-index: 2;
       }
     }
 
     .technologies-container {
-      margin-top: 10px;
-
       span {
-        padding: 3px 10px;
-        background-color: rgb(125, 125, 210);
-        margin-left: 5px;
+        padding: 3px 0;
+        color: var.$primary-colour;
       }
     }
 
     .links-container {
       margin-top: 10px;
+
       button {
         cursor: pointer;
         padding: 8px;
@@ -59,34 +71,58 @@
       }
     }
   }
+  .image-hover-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border: 2px solid white;
+  }
 
-  .image-liveLink {
-    div {
+  @media (max-width: 1200px) {
+    margin: 55px 0;
+
+    .image-liveLink {
       display: none;
     }
-  }
-  .image-liveLink:hover {
-    position: relative;
-    div {
-      @include mix.flexCenter(row);
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: black;
-      opacity: 0.55;
-      button {
-        font-size: 22px;
-        padding: 20px;
-        font-weight: 600;
-        border-radius: 50px;
-        z-index: 2;
-        cursor: pointer;
+
+    .Project-info-container {
+      width: 90vw;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: rgba(0, 0, 0, 0.845);
+      background-blend-mode: darken;
+      border-radius: 6px;
+
+      h4 {
+        align-self: flex-start !important;
       }
-      button:hover {
-        filter: brightness(1.3);
+
+      p {
+        text-align: start !important;
+        position: relative;
+        z-index: 121232232300;
+        font-size: 144px;
+      }
+
+      .technologies-container {
+        align-self: flex-start !important;
+        display: flex;
+        flex-wrap: wrap;
+
+        span {
+          margin-left: 0 !important;
+          margin-right: 16px !important;
+        }
+      }
+
+      .links-container {
+        align-self: flex-start !important;
       }
     }
+  }
+  hr {
+    margin: 110px 0;
+    width: 150vw;
+    margin-left: -50vw;
   }
 }
