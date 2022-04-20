@@ -22,12 +22,11 @@ const Project = ({ project, index }) => {
     >
       {index % 2 !== 0 ? (
         <div>
-          <Fade direction="left" delay={450} triggerOnce>
+          <Fade direction={index !== 2 ? "left" : null} delay={450} triggerOnce>
             <a href={liveLink} target="blank" className="image-liveLink ">
               <img src={picture} alt="Project"></img>
             </a>
-          </Fade>
-          <Fade direction="right" triggerOnce>
+
             <div
               className="Project-info-container"
               style={
@@ -72,7 +71,7 @@ const Project = ({ project, index }) => {
         </div>
       ) : (
         <div>
-          <Fade direction="left" triggerOnce>
+          <Fade direction="right" triggerOnce>
             <div
               className="Project-info-container"
               style={
@@ -107,8 +106,6 @@ const Project = ({ project, index }) => {
                 </a>
               </div>
             </div>
-          </Fade>
-          <Fade direction="right" delay={450} triggerOnce>
             <a href={liveLink} target="blank" className="image-liveLink">
               <img src={picture} alt="Project"></img>
             </a>
