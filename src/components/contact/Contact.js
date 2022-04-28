@@ -269,7 +269,8 @@ const Contact = ({ lightTheme, refContact }) => {
         <h2>Check me out</h2>
         <a
           href="https://www.linkedin.com/in/anthony-n-96a368237/"
-          target={"blank"}
+          target="_blank"
+          rel="noreferrer"
         >
           <img
             style={{ marginLeft: "-70px" }}
@@ -277,7 +278,7 @@ const Contact = ({ lightTheme, refContact }) => {
             alt="LinkedIn Logo"
           />{" "}
         </a>
-        <a href="https://github.com/Nuccino92" target={"blank"}>
+        <a href="https://github.com/Nuccino92" target="_blank" rel="noreferrer">
           <img
             style={
               lightTheme
