@@ -1,4 +1,5 @@
 @use "../../scss/variables" as var;
+@use "../../scss/mixins" as mix;
 
 .Experience {
   width: 100%;
@@ -28,5 +29,40 @@
     font-weight: 900;
     color: var.$primary-colour;
     margin-top: -100px;
+  }
+
+  .extra-projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+
+    @media (max-width: 1100px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 750px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .show-more-btn {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: var.$secondary-colour;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 40px 0;
+    padding: 10px 15px;
+    // scroll-margin-top: 0;
+    scroll-margin-top: 200px;
+    @include mix.btn-border-drawing(
+      var.$secondary-colour,
+      orange,
+      3px,
+      bottom,
+      right
+    );
   }
 }
