@@ -23,7 +23,12 @@ const Project = ({ project, index }) => {
       {index % 2 !== 0 ? (
         <div>
           <Fade direction={index !== 2 ? "left" : null} delay={450} triggerOnce>
-            <a href={liveLink} target="blank" className="image-liveLink ">
+            <a
+              href={liveLink}
+              target="_blank"
+              rel="noreferrer"
+              className="image-liveLink "
+            >
               <img src={picture} alt="Project"></img>
             </a>
 
@@ -54,10 +59,10 @@ const Project = ({ project, index }) => {
                 className="links-container"
                 style={{ alignSelf: "flex-end" }}
               >
-                <a href={liveLink} target="blank">
+                <a href={liveLink} target="_blank" rel="noreferrer">
                   <button className="link-button">Visit Site!</button>
                 </a>
-                <a href={github} target="blank">
+                <a href={github} target="_blank" rel="noreferrer">
                   <button
                     style={{ marginLeft: "10px" }}
                     className="link-button"
@@ -93,7 +98,7 @@ const Project = ({ project, index }) => {
                 })}
               </div>
               <div className="links-container">
-                <a href={liveLink} target="blank">
+                <a href={liveLink} target="_blank" rel="noreferrer">
                   <button
                     style={{ marginRight: "10px" }}
                     className="link-button"
@@ -101,12 +106,17 @@ const Project = ({ project, index }) => {
                     Visit Site!
                   </button>
                 </a>
-                <a href={github} target="blank">
+                <a href={github} target="_blank" rel="noreferrer">
                   <button className="link-button">Github</button>
                 </a>
               </div>
             </div>
-            <a href={liveLink} target="blank" className="image-liveLink">
+            <a
+              href={liveLink}
+              target="_blank"
+              rel="noreferrer"
+              className="image-liveLink"
+            >
               <img src={picture} alt="Project"></img>
             </a>
           </Fade>
