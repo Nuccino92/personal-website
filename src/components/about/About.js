@@ -67,7 +67,7 @@ const About = ({ refAbout }) => {
               </li>
               <li>
                 <img src={Javascript} alt="Javascript Logo"></img>
-                <h4>Javascript</h4>
+                <h4>JavaScript</h4>
               </li>
               <li>
                 <img src={React} alt="React Logo"></img>
@@ -79,7 +79,7 @@ const About = ({ refAbout }) => {
               </li>
               <li>
                 <img src={SASS} alt="SASS Logo"></img>
-                <h4>SASS</h4>
+                <h4>Sass</h4>
               </li>
             </ul>{" "}
           </div>
@@ -90,7 +90,7 @@ const About = ({ refAbout }) => {
             <ul style={{ alignSelf: "flex-end" }}>
               <li>
                 <img src={Node} alt="Node Logo"></img>
-                <h4>NodeJS</h4>
+                <h4>Node.js</h4>
               </li>
               <li>
                 <img src={Express} alt="Express Logo"></img>
