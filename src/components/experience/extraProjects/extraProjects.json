@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Where's Waldo",
+    "description": "A game of Where's Waldo. Multiple levels to choose from, each of which has a leaderboard that captures the time it took to complete.",
+    "picture": "https://cdn.discordapp.com/attachments/709512705819672637/968689456553033758/unknown.png",
+    "github": "https://github.com/Nuccino92/wheres-waldo",
+    "liveLink": "https://wheres-waldo-fec18.web.app",
+    "technologies": "React   JavaScript   HTML   CSS   Firebase"
+  },
+  {
+    "id": 2,
+    "name": "Resume Builder",
+    "description": "A React application that allows you to create and print a resume.",
+    "picture": "https://cdn.discordapp.com/attachments/709512705819672637/968688100471611392/unknown.png",
+    "github": "https://github.com/Nuccino92/cv-project",
+    "liveLink": "https://unique-cactus-35d477.netlify.app/",
+    "technologies": "React   JavaScript   HTML   CSS"
+  },
+  {
+    "id": 3,
+    "name": "Remember that Pokemon!",
+    "description": "A memory game using the PokeAPI. Test yourself and find out what score you could achieve.",
+    "picture": "https://cdn.discordapp.com/attachments/709512705819672637/968689144513581076/unknown.png",
+    "github": "https://github.com/Nuccino92/memory-card",
+    "liveLink": "https://enchanting-marshmallow-f4950b.netlify.app/",
+    "technologies": "React   JavaScript   HTML   CSS"
+  },
+  {
+    "id": 4,
+    "name": "Shamazon",
+    "description": "A React application using the Fake Store API. Shop virtually and manage your shopping cart before you checkout.",
+    "picture": "https://cdn.discordapp.com/attachments/709512705819672637/968690077687484416/unknown.png",
+    "github": "https://github.com/Nuccino92/shopping-cart",
+    "liveLink": "https://lighthearted-eclair-d4fc18.netlify.app/",
+    "technologies": "React   JavaScript   HTML   CSS"
+  },
+  {
+    "id": 5,
+    "name": "Battleship",
+    "description": "A Battleship game JavaScript application. Battle the computer and be the first to destroy each other's fleet.",
+    "picture": "https://cdn.discordapp.com/attachments/709512705819672637/968688541884379146/unknown.png",
+    "github": "https://github.com/Nuccino92/battleship",
+    "liveLink": "https://creative-flan-d08c34.netlify.app/",
+    "technologies": "JavaScript   HTML   CSS"
+  },
+  {
+    "id": 6,
+    "name": "The Super Exciting Calculator",
+    "description": "The most exciting calculator you've ever seen!",
+    "picture": "https://cdn.discordapp.com/attachments/709512705819672637/968689773717880842/unknown.png",
+    "github": "https://github.com/Nuccino92/calculator",
+    "liveLink": "https://incandescent-tartufo-ce0897.netlify.app",
+    "technologies": "JavaScript   HTML   CSS"
+  }
+]
