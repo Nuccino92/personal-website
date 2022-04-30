@@ -268,7 +268,7 @@ const Contact = ({ lightTheme, refContact }) => {
       <div className="socials">
         <h2>Check me out</h2>
         <a
-          href="https://www.linkedin.com/in/anthony-n-96a368237/"
+          href="https://www.linkedin.com/in/anthony-nucci-96a368237/"
           target="_blank"
           rel="noreferrer"
         >

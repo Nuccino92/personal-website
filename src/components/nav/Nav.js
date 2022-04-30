@@ -130,12 +130,17 @@ const Nav = ({
                 )}
                 <div className="nav-links-container">
                   <a
-                    href="https://www.linkedin.com/in/anthony-n-96a368237/"
-                    target={"blank"}
+                    href="https://www.linkedin.com/in/anthony-nucci-96a368237/"
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     <img src={LinkedInLogo} alt="LinkedIn Logo" />
                   </a>
-                  <a href="https://github.com/Nuccino92" target={"blank"}>
+                  <a
+                    href="https://github.com/Nuccino92"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <img
                       className="github-small-nav"
                       src={GitHubLogo}
