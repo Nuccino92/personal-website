@@ -1,6 +1,15 @@
 [
   {
     "id": 1,
+    "name": "Unsplash Photo Gallery",
+    "description": "A collection of some of my favorite images on Unsplash written in Typescript using React",
+    "picture": "https://cdn.discordapp.com/attachments/709512705819672637/973440327757226044/unknown.png",
+    "github": "https://github.com/Nuccino92/art_gallery",
+    "liveLink": "https://unsplashphoto-gallery.netlify.app/",
+    "technologies": "Typescript  Bootstrap  React  SCSS"
+  },
+  {
+    "id": 2,
     "name": "Where's Waldo",
     "description": "A game of Where's Waldo. Multiple levels to choose from, each of which has a leaderboard that captures the time it took to complete.",
     "picture": "https://cdn.discordapp.com/attachments/709512705819672637/968689456553033758/unknown.png",
@@ -9,7 +18,7 @@
     "technologies": "React   JavaScript   HTML   CSS   Firebase"
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "Resume Builder",
     "description": "A React application that allows you to create and print a resume.",
     "picture": "https://cdn.discordapp.com/attachments/709512705819672637/968688100471611392/unknown.png",
@@ -18,7 +27,7 @@
     "technologies": "React   JavaScript   HTML   CSS"
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Remember that Pokemon!",
     "description": "A memory game using the PokeAPI. Test yourself and find out what score you could achieve.",
     "picture": "https://cdn.discordapp.com/attachments/709512705819672637/968689144513581076/unknown.png",
@@ -27,7 +36,7 @@
     "technologies": "React   JavaScript   HTML   CSS"
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "Shamazon",
     "description": "A React application using the Fake Store API. Shop virtually and manage your shopping cart before you checkout.",
     "picture": "https://cdn.discordapp.com/attachments/709512705819672637/968690077687484416/unknown.png",
@@ -36,21 +45,12 @@
     "technologies": "React   JavaScript   HTML   CSS"
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "Battleship",
     "description": "A Battleship game JavaScript application. Battle the computer and be the first to destroy each other's fleet.",
-    "picture": "https://cdn.discordapp.com/attachments/709512705819672637/968688541884379146/unknown.png",
+    "picture": "https://cdn.discordapp.com/attachments/709512705819672637/973439780308254790/unknown.png",
     "github": "https://github.com/Nuccino92/battleship",
     "liveLink": "https://creative-flan-d08c34.netlify.app/",
-    "technologies": "JavaScript   HTML   CSS"
-  },
-  {
-    "id": 6,
-    "name": "The Super Exciting Calculator",
-    "description": "The most exciting calculator you've ever seen!",
-    "picture": "https://cdn.discordapp.com/attachments/709512705819672637/968689773717880842/unknown.png",
-    "github": "https://github.com/Nuccino92/calculator",
-    "liveLink": "https://incandescent-tartufo-ce0897.netlify.app",
     "technologies": "JavaScript   HTML   CSS"
   }
 ]
