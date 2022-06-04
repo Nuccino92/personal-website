@@ -1,6 +1,15 @@
 [
   {
     "id": 1,
+    "name": "YouTube Clone",
+    "description": "The YouTube Clone application allows users to find and search for videos using YouTube's API.",
+    "technologies": "Javascript  CSS  React  Firebase",
+    "picture": "https://cdn.discordapp.com/attachments/709512705819672637/963198443394850867/unknown.png",
+    "github": "https://github.com/Nuccino92/youtube-mock",
+    "liveLink": "https://mock-e69d2.web.app/"
+  },
+  {
+    "id": 2,
     "name": "Unsplash Photo Gallery",
     "description": "A collection of some of my favorite images on Unsplash written in Typescript using React",
     "picture": "https://cdn.discordapp.com/attachments/709512705819672637/973440327757226044/unknown.png",
@@ -9,7 +18,7 @@
     "technologies": "Typescript  Bootstrap  React  SCSS"
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "Where's Waldo",
     "description": "A game of Where's Waldo. Multiple levels to choose from, each of which has a leaderboard that captures the time it took to complete.",
     "picture": "https://cdn.discordapp.com/attachments/709512705819672637/968689456553033758/unknown.png",
@@ -18,21 +27,12 @@
     "technologies": "React   JavaScript   HTML   CSS   Firebase"
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "Resume Builder",
     "description": "A React application that allows you to create and print a resume.",
     "picture": "https://cdn.discordapp.com/attachments/709512705819672637/968688100471611392/unknown.png",
     "github": "https://github.com/Nuccino92/cv-project",
     "liveLink": "https://unique-cactus-35d477.netlify.app/",
-    "technologies": "React   JavaScript   HTML   CSS"
-  },
-  {
-    "id": 4,
-    "name": "Remember that Pokemon!",
-    "description": "A memory game using the PokeAPI. Test yourself and find out what score you could achieve.",
-    "picture": "https://cdn.discordapp.com/attachments/709512705819672637/968689144513581076/unknown.png",
-    "github": "https://github.com/Nuccino92/memory-card",
-    "liveLink": "https://enchanting-marshmallow-f4950b.netlify.app/",
     "technologies": "React   JavaScript   HTML   CSS"
   },
   {
