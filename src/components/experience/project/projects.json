@@ -1,26 +1,6 @@
 [
   {
     "id": 1,
-    "name": "nuccis designs",
-    "about": [
-      {
-        "description": "nuccis designs is a made from scratch website for a custom product business.",
-        "tech": "The business site was built with React and Typescript. For the UI SCSS was mainly used, along with Boostrap and some Styled Components."
-      }
-    ],
-    "technologies": [
-      "Typescript",
-      "SCSS",
-      "React",
-      "Bootstrap",
-      "Styled Components"
-    ],
-    "picture": "https://cdn.discordapp.com/attachments/709512705819672637/982768821611921528/unknown.png",
-    "github": "https://github.com/Nuccino92/nuccis.designs-business-site",
-    "liveLink": "https://nuccisdesigns.ca"
-  },
-  {
-    "id": 2,
     "name": "Facebook Clone",
     "about": [
       {
@@ -43,7 +23,7 @@
     "liveLink": "https://facebook-mock-project.netlify.app/"
   },
   {
-    "id": 3,
+    "id": 2,
     "name": "ChatApp",
     "about": [
       {
@@ -64,5 +44,25 @@
     "picture": "https://cdn.discordapp.com/attachments/709512705819672637/963198913467252756/unknown.png",
     "github": "https://github.com/Nuccino92/chat-app",
     "liveLink": "https://chatify-app-project.netlify.app/"
+  },
+  {
+    "id": 3,
+    "name": "nuccis designs",
+    "about": [
+      {
+        "description": "nuccis designs is a made from scratch website for a custom product business.",
+        "tech": "The business site was built with React and Typescript. For the UI SCSS was mainly used, along with Boostrap and some Styled Components."
+      }
+    ],
+    "technologies": [
+      "Typescript",
+      "SCSS",
+      "React",
+      "Bootstrap",
+      "Styled Components"
+    ],
+    "picture": "https://cdn.discordapp.com/attachments/709512705819672637/982768821611921528/unknown.png",
+    "github": "https://github.com/Nuccino92/nuccis.designs-business-site",
+    "liveLink": "https://nuccisdesigns.ca"
   }
 ]
