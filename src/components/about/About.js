@@ -6,13 +6,16 @@ import CSS from "../../images/frontend/css.png";
 import Javascript from "../../images/frontend/javascript.png";
 import React from "../../images/frontend/react.png";
 import Redux from "../../images/frontend/redux.png";
-import SASS from "../../images/frontend/sass.png";
+import Tailwind from "../../images/frontend/tailwind.png";
+import Typescript from "../../images/frontend/typescript.png";
 // backend logos
 import Node from "../../images/backend/node.png";
 import Express from "../../images/backend/express.png";
 import Mongo from "../../images/backend/mongo.png";
 import MySQL from "../../images/backend/mysql.png";
 import Firebase from "../../images/backend/firebase.png";
+import PHP from "../../images/backend/php.png";
+import LARAVEL from "../../images/backend/laravel.png";
 
 const About = ({ refAbout }) => {
   return (
@@ -28,22 +31,19 @@ const About = ({ refAbout }) => {
           <div className="About-top">
             <h1>About me</h1>
             <p>
-              Hi,&#160; I'm Anthony,&#160; a Full Stack Developer who luckily
-              found and fell in love with programming in the pursuit of
-              bettering myself.
+              Hi, I'm Anthony, a Full Stack Developer driven by a genuine
+              passion for software development and problem-solving.
             </p>
             <br></br>
             <p>
-              I consider myself a naturally curious person who enjoys learning
-              about and acquiring new skills, which is what makes development so
-              much fun.
+              My natural curiosity fuels my desire to continuously learn and
+              master new technologies across the development stack.
             </p>
             <br></br>
             <p>
-              I've found equal enjoyment when working from the front or back
-              end, whether it'd be creating an API or UI as long as I am able to
-              improve and build upon myself that is where I find true
-              excitement.
+              I thrive on building both engaging user interfaces and robust
+              back-end systems, always focused on creating effective,
+              well-crafted solutions.
             </p>
             <br></br>
             <p className="about-me-technologies-p">
@@ -58,6 +58,18 @@ const About = ({ refAbout }) => {
             </Fade>
             <ul>
               <li>
+                <img src={React} alt="React Logo"></img>
+                <h4>React</h4>
+              </li>
+              <li>
+                <img src={Typescript} alt="Typescript Logo"></img>
+                <h4>Typescript</h4>
+              </li>
+              <li>
+                <img src={Javascript} alt="Javascript Logo"></img>
+                <h4>JavaScript</h4>
+              </li>
+              <li>
                 <img src={HTML} alt="HTML Logo"></img>
                 <h4>HTML</h4>
               </li>
@@ -66,20 +78,8 @@ const About = ({ refAbout }) => {
                 <h4>CSS</h4>
               </li>
               <li>
-                <img src={Javascript} alt="Javascript Logo"></img>
-                <h4>JavaScript</h4>
-              </li>
-              <li>
-                <img src={React} alt="React Logo"></img>
-                <h4>React</h4>
-              </li>
-              <li>
-                <img src={Redux} alt="Redux Logo"></img>
-                <h4>Redux</h4>
-              </li>
-              <li>
-                <img src={SASS} alt="SASS Logo"></img>
-                <h4>Sass</h4>
+                <img src={Tailwind} alt="Tailwind Logo"></img>
+                <h4>Tailwind</h4>
               </li>
             </ul>{" "}
           </div>
@@ -95,6 +95,14 @@ const About = ({ refAbout }) => {
               <li>
                 <img src={Express} alt="Express Logo"></img>
                 <h4>Express</h4>
+              </li>
+              <li>
+                <img src={PHP} alt="PHP Logo"></img>
+                <h4>PHP</h4>
+              </li>
+              <li>
+                <img src={LARAVEL} alt="Laravel Logo"></img>
+                <h4>Laravel</h4>
               </li>
               <li>
                 <img src={Mongo} alt="Mongo Logo"></img>
