@@ -1,6 +1,30 @@
 [
   {
     "id": 1,
+    "name": "Keepr (Coming Soon)",
+    "about": [
+      {
+        "description": "Keepr is my custom-built platform that streamlines sports league management. It handles teams, players, registrations and notifications while giving players professional-quality stats pages. Powerful admin tools for organizers paired with engaging player-facing features make running recreational leagues simple and engaging. Currently in development as a commercial SaaS solution for league administrators.",
+        "tech": "Built with React, Next.js, and Tailwind CSS for the frontend. Backend powered by Laravel (PHP) with PostgreSQL database. Features include Stripe payment processing, SMS/email notifications, and tournament scheduling tools. Containerized with Docker and deployed on AWS."
+      }
+    ],
+    "technologies": [
+      "Typescript",
+      "Next.js",
+      "Tailwind",
+      "TanStack Query",
+      "PHP",
+      "Laravel",
+      "Postgres",
+      "AWS",
+      "Stripe"
+    ],
+    "picture": "https://res-console.cloudinary.com/dwshqssez/thumbnails/v1/image/upload/v1745037554/aW1hZ2VfbHJ2OGVl/drilldown",
+    "github": null,
+    "liveLink": null
+  },
+  {
+    "id": 2,
     "name": "Facebook Clone",
     "about": [
       {
@@ -23,7 +47,7 @@
     "liveLink": "https://superfun-fbc-ant.netlify.app/"
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "ChatApp",
     "about": [
       {

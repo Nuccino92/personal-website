@@ -18,9 +18,9 @@ const Project = ({ project, index }) => {
   return (
     <div
       className="Project"
-      style={index === 1 ? { marginBottom: "110px" } : null}
+      style={index === 2 ? { marginBottom: "110px" } : null}
     >
-      {index % 1 !== 0 ? (
+      {index % 2 !== 0 ? (
         <div>
           <Fade direction={index !== 1 ? "left" : null} delay={450} triggerOnce>
             <a
@@ -40,36 +40,38 @@ const Project = ({ project, index }) => {
                   : { backgroundImage: `url(${picture})`, color: "white" }
               }
             >
-              <h4 style={{ alignSelf: "flex-end" }}>{name}</h4>
-              <p style={{ textAlign: "end" }}>{about[0].description}</p>
-              <p style={{ textAlign: "end" }}>{about[0].tech}</p>
+              <h4 style={{ alignSelf: "" }}>{name}</h4>
+              <p style={{ textAlign: "" }}>{about[0].description}</p>
+              <p style={{ textAlign: "" }}>{about[0].tech}</p>
               <div
                 className="technologies-container"
-                style={{ alignSelf: "flex-end" }}
+                style={{ whiteSpace: "nowrap" }}
               >
                 {technologies.map((technology, index) => {
                   return (
-                    <span style={{ marginLeft: "16px" }} key={index}>
+                    <span style={{ marginRight: "16px" }} key={index}>
                       {technology}
                     </span>
                   );
                 })}
               </div>
-              <div
-                className="links-container"
-                style={{ alignSelf: "flex-end" }}
-              >
-                <a href={liveLink} target="_blank" rel="noreferrer">
-                  <button className="link-button">Visit Site!</button>
-                </a>
-                <a href={github} target="_blank" rel="noreferrer">
-                  <button
-                    style={{ marginLeft: "10px" }}
-                    className="link-button"
-                  >
-                    Github
-                  </button>
-                </a>
+              <div className="links-container" style={{ alignSelf: "" }}>
+                {liveLink && (
+                  <a href={liveLink} target="_blank" rel="noreferrer">
+                    <button className="link-button">Visit Site!</button>
+                  </a>
+                )}
+
+                {github && (
+                  <a href={github} target="_blank" rel="noreferrer">
+                    <button
+                      style={{ marginLeft: "10px" }}
+                      className="link-button"
+                    >
+                      Github
+                    </button>
+                  </a>
+                )}
               </div>
             </div>
           </Fade>
@@ -88,7 +90,16 @@ const Project = ({ project, index }) => {
               <h4>{name}</h4>
               <p>{about[0].description}</p>
               <p>{about[0].tech}</p>
-              <div className="technologies-container">
+              <div
+                className="technologies-container"
+                style={{
+                  whiteSpace: "nowrap",
+                  maxWidth: "600px",
+                  flexWrap: "wrap",
+                  display: "flex",
+                  justifyContent: "start",
+                }}
+              >
                 {technologies.map((technology, index) => {
                   return (
                     <span style={{ marginRight: "16px" }} key={index}>
@@ -98,17 +109,22 @@ const Project = ({ project, index }) => {
                 })}
               </div>
               <div className="links-container">
-                <a href={liveLink} target="_blank" rel="noreferrer">
-                  <button
-                    style={{ marginRight: "10px" }}
-                    className="link-button"
-                  >
-                    Visit Site!
-                  </button>
-                </a>
-                <a href={github} target="_blank" rel="noreferrer">
-                  <button className="link-button">Github</button>
-                </a>
+                {liveLink && (
+                  <a href={liveLink} target="_blank" rel="noreferrer">
+                    <button
+                      style={{ marginRight: "10px" }}
+                      className="link-button"
+                    >
+                      Visit Site!
+                    </button>
+                  </a>
+                )}
+
+                {github && (
+                  <a href={github} target="_blank" rel="noreferrer">
+                    <button className="link-button">Github</button>
+                  </a>
+                )}
               </div>
             </div>
             <a
@@ -122,7 +138,7 @@ const Project = ({ project, index }) => {
           </Fade>
         </div>
       )}
-      {index !== 1 && <hr style={matches ? null : { display: "none" }}></hr>}
+      {index !== 2 && <hr style={matches ? null : { display: "none" }}></hr>}
     </div>
   );
 };
