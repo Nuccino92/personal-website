@@ -32,13 +32,11 @@ const About = ({ refAbout }) => {
             <h1>About me</h1>
             <p>
               Hi, I'm Anthony, a Full Stack Developer with over 3 years of
-              professional experience, gained primarily within a dynamic startup
-              environment. This hands-on experience has sharpened my skills
-              across the full stack and deepened my passion for solving complex
-              problems through well-crafted code. I thrive on building both
-              engaging user interfaces and robust back-end systems, always
-              driven by a curiosity to learn and apply new technologies
-              effectively.
+              experience building comprehensive web applications. I'm passionate
+              about creating clean, efficient code that solves real-world
+              problems across the entire development stack. I enjoy working with
+              modern technologies and continuously expanding my skills to
+              deliver polished, user-focused solutions.
             </p>
             <br></br>
             <p className="about-me-technologies-p">
