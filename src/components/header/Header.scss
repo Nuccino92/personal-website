@@ -305,10 +305,10 @@ $stars-big: generateStars(200);
   position: absolute;
   top: 0;
   right: 0;
-  left: -10rem;
+  left: -15rem;
   bottom: 0;
   align-self: center;
-  width: 150%;
+  width: 200%;
   height: 100vh;
 
   @include translate50;

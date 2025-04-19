@@ -25,6 +25,15 @@
     }
   }
 
+  .current-role {
+    font-size: 36px;
+    color: var.$primary-colour;
+    margin-bottom: 50px;
+    @media (max-width: 400px) {
+      font-size: 25px;
+    }
+  }
+
   .About-container {
     display: flex;
     justify-content: space-between;

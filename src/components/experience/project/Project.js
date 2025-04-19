@@ -18,11 +18,11 @@ const Project = ({ project, index }) => {
   return (
     <div
       className="Project"
-      style={index === 2 ? { marginBottom: "110px" } : null}
+      style={index === 1 ? { marginBottom: "110px" } : null}
     >
-      {index % 2 !== 0 ? (
+      {index % 1 !== 0 ? (
         <div>
-          <Fade direction={index !== 2 ? "left" : null} delay={450} triggerOnce>
+          <Fade direction={index !== 1 ? "left" : null} delay={450} triggerOnce>
             <a
               href={liveLink}
               target="_blank"
@@ -122,7 +122,7 @@ const Project = ({ project, index }) => {
           </Fade>
         </div>
       )}
-      {index !== 2 && <hr style={matches ? null : { display: "none" }}></hr>}
+      {index !== 1 && <hr style={matches ? null : { display: "none" }}></hr>}
     </div>
   );
 };
