@@ -3,6 +3,10 @@ import "./Project.scss";
 import { Fade } from "react-awesome-reveal";
 import { useEffect, useState } from "react";
 
+import keeprimg from "../../../images/projects/keepr.png";
+import fbimg from "../../../images/projects/fb.png";
+import chatappimg from "../../../images/projects/chatapp.png";
+
 const Project = ({ project, index }) => {
   const { name, picture, about, liveLink, technologies, github } = project;
 
@@ -14,6 +18,8 @@ const Project = ({ project, index }) => {
       .matchMedia("(min-width: 1200px)")
       .addEventListener("change", (e) => setMatches(e.matches));
   }, []);
+
+  const imgsrc = index === 0 ? keeprimg : index === 1 ? fbimg : chatappimg;
 
   return (
     <div
@@ -29,7 +35,7 @@ const Project = ({ project, index }) => {
               rel="noreferrer"
               className="image-liveLink "
             >
-              <img src={picture} alt="Project"></img>
+              <img src={imgsrc} alt="Project"></img>
             </a>
 
             <div
@@ -37,7 +43,7 @@ const Project = ({ project, index }) => {
               style={
                 matches
                   ? { background: "none" }
-                  : { backgroundImage: `url(${picture})`, color: "white" }
+                  : { backgroundImage: `url(${imgsrc})`, color: "white" }
               }
             >
               <h4 style={{ alignSelf: "" }}>{name}</h4>
@@ -84,7 +90,7 @@ const Project = ({ project, index }) => {
               style={
                 matches
                   ? { background: "none" }
-                  : { backgroundImage: `url(${picture})`, color: "white" }
+                  : { backgroundImage: `url(${imgsrc})`, color: "white" }
               }
             >
               <h4>{name}</h4>
@@ -133,7 +139,7 @@ const Project = ({ project, index }) => {
               rel="noreferrer"
               className="image-liveLink"
             >
-              <img src={picture} alt="Project"></img>
+              <img src={imgsrc} alt="Project"></img>
             </a>
           </Fade>
         </div>

@@ -5,7 +5,7 @@ import HTML from "../../images/frontend/html.png";
 import CSS from "../../images/frontend/css.png";
 import Javascript from "../../images/frontend/javascript.png";
 import React from "../../images/frontend/react.png";
-import Redux from "../../images/frontend/redux.png";
+import Nextjs from "../../images/frontend/nextjs.png";
 import Tailwind from "../../images/frontend/tailwind.png";
 import Typescript from "../../images/frontend/typescript.png";
 // backend logos
@@ -53,6 +53,10 @@ const About = ({ refAbout }) => {
               <li>
                 <img src={React} alt="React Logo"></img>
                 <h4>React</h4>
+              </li>
+              <li>
+                <img src={Nextjs} alt="Nextjs Logo"></img>
+                <h4>Next.js</h4>
               </li>
               <li>
                 <img src={Typescript} alt="Typescript Logo"></img>
