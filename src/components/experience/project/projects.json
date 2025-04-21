@@ -19,7 +19,7 @@
       "AWS",
       "Stripe"
     ],
-    "picture": "https://res-console.cloudinary.com/dwshqssez/thumbnails/v1/image/upload/v1745037554/aW1hZ2VfbHJ2OGVl/drilldown",
+    "picture": "https://res.cloudinary.com/dwshqssez/image/upload/v1745037554/image_lrv8ee.png",
     "github": null,
     "liveLink": null
   },
@@ -42,7 +42,7 @@
       "Redux",
       "Socket.IO"
     ],
-    "picture": "https://res-console.cloudinary.com/dwshqssez/thumbnails/v1/image/upload/v1745028712/aW1hZ2VfZXVuZHJl/drilldown",
+    "picture": "https://res.cloudinary.com/dwshqssez/image/upload/v1646260027/qun5caffybrxwgpwu9gd.jpg",
     "github": "https://github.com/Nuccino92/facebook-clone",
     "liveLink": "https://mock-portfolio-project-socialconnect.netlify.app/"
   },
@@ -65,7 +65,7 @@
       "Redux",
       "Socket.IO"
     ],
-    "picture": "https://res-console.cloudinary.com/dwshqssez/thumbnails/v1/image/upload/v1745029816/aW1hZ2VfanNpMnB1/drilldown",
+    "picture": "https://res.cloudinary.com/dwshqssez/image/upload/v1745029816/image_jsi2pu.png",
     "github": "https://github.com/Nuccino92/chat-app",
     "liveLink": "https://superfun-chat-app.netlify.app/"
   }
